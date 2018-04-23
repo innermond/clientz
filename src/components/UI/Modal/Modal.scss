@@ -1,0 +1,64 @@
+@import '~Assets/scss/variables';
+
+.Container {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	max-height: 100%;
+	width: 100%;
+	z-index: $zIndexModal;
+	background-color: $light;
+	box-sizing: border-box;
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px rgba($dark, .6);
+}
+
+.Header {
+	color: $light;
+	background-color: $dark;
+	padding: 0.5em;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.Close {
+	font-size: 2em;
+	color: $light;
+	background-color: $dark;
+	border-radius: 50%;
+	line-height: 50%;
+	padding: 2px;
+	float: right;
+	&:hover,
+	&:focus {
+		color: $dark;
+		background-color: $light;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+.Scrollable {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: .5em;
+	box-sizing: border-box;
+}
+
+.Footer {
+	color: $light;
+	background-color: $dark;
+	padding: 0.5em;
+	border-radius: 0px 0px 5px 5px;
+}
+
+@media (min-width: 800px) {
+	.Container {
+		max-width: 800px;
+	}
+}
