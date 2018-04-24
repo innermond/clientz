@@ -6,8 +6,8 @@
 
 .Header {
   background-color: lighten($backgroundColor, 20%);
-  height: 150px;
-  padding: 20px;
+  height: 50px;
+  padding: 0px;
   color: $foregroundColor;
 }
 
@@ -18,3 +18,8 @@
 .Intro {
   font-size: large;
 }
+
+::selection {
+    color: red;
+    background: yellow;
+	}

@@ -35,7 +35,7 @@ class App extends Component {
 		return (
 			<div className={styles.Container}>
 				<header className={styles.Header}>
-					<h1 className={styles.Title}>Welcome to Clientz!!!</h1>
+					<h1 className={styles.Title}>Welcome to Clientz!</h1>
 				</header>
 				<AsyncModal header="aaaa" footer="bbbb" gravity="sn" show={this.state.modalized} closed={toggleModal} >
 					<p> This is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modalThis is modal</p>

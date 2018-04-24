@@ -3,13 +3,17 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const port = process.env.port || 3000;
+const publicPath = '/';
 
 module.exports = {
 	mode: 'development',
-	entry: './src/index.js',
+	entry: {
+		app: './src/index.js'
+	},
 	output: {
-		filename: 'app.[hash].js',
-		chunkFilename: '[name].[id].js',
+		filename: '[name].js',
+		chunkFilename: '[id].js',
+		publicPath: publicPath
 	},
 	devtool: 'inline-source-map',
 	resolve: {
@@ -70,13 +74,15 @@ module.exports = {
 			favicon: 'public/favicon.ico',
 			inject: true
 		}),
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.DefinePlugin({
+			'process.env.PUBLIC_URL': JSON.stringify(publicPath)
+		})
 	],
 	devServer: {
 		host: 'localhost',
 		port: port,
 		historyApiFallback: true,
-		open: true,
 		hot: true
 	}
 };
